@@ -6,7 +6,7 @@ spring:
   #数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.15.128:3306/mybatis_plus?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://192.168.15.128:3306/db_srb_core?useSSL=false&serverTimezone=UTC
     username: root
     password: 1234
   #环境配置

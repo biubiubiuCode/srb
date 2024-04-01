@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @MapperScan("org.example.srb.core.mapper")
 @EnableTransactionManagement //引入事务的Bean
 public class MyBatisPlusConfig {
-    //分页拦截器管理
+    //配置分页插件
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
