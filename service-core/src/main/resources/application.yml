@@ -1,0 +1,27 @@
+
+server:
+  #服务端口
+  port: 8110
+spring:
+  #数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.15.128:3306/mybatis_plus?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 1234
+  #环境配置
+  profiles:
+    active: dev
+  #服务名
+  application:
+    name: service-core
+
+mybatis-plus:
+  #mybatis日志
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #配置 xml 文件的路径，此处假设在 resource/xml/目录下
+  #mapper-locations: classpath:xml/*.xml
+  mapper-locations: org/example/srb/core/mapper/xml/*.xml
+
+
