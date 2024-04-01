@@ -14,7 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @Create 2024/04/01 19:40
  **/
 @SpringBootApplication
-@ComponentScan("org.example.srb")
+@ComponentScan({"org.example.srb", "org.example.common"})
 public class ServiceCoreApplication {
     public static void main(String[] args) {
         SpringApplication.run(ServiceCoreApplication.class, args);
