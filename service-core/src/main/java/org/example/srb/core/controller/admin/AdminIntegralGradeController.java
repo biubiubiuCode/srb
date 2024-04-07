@@ -3,8 +3,11 @@ package org.example.srb.core.controller.admin;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import lombok.extern.slf4j.Slf4j;
+import org.example.common.exception.Assert;
 import org.example.common.result.R;
-import org.example.srb.core.pojo.IntegralGrade;
+import org.example.common.result.ResponseEnum;
+import org.example.srb.core.pojo.entity.IntegralGrade;
 import org.example.srb.core.service.IntegralGradeService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,6 +29,7 @@ import java.util.List;
 @Api(tags = "积分登记管理")
 @CrossOrigin //跨域
 @RestController
+@Slf4j
 @RequestMapping("/admin/core/integralGrade")
 public class AdminIntegralGradeController {
     @Resource
@@ -34,6 +38,9 @@ public class AdminIntegralGradeController {
     @ApiOperation("积分等级列表")
     @GetMapping("/list")
     public R listAll(){
+//        log.info("info 级别的日志输出");
+//        log.error("error级别的日志输出");
+//        log.warn("WARN级别的日志输出");
         List<IntegralGrade> list = integralGradeService.list();
         return R.ok().data("list", list);
     }
@@ -56,6 +63,13 @@ public class AdminIntegralGradeController {
     public R save(
             @ApiParam(value = "积分等级对象", required = true)
             @RequestBody IntegralGrade integralGrade){
+        //贷款额度为空则抛出自定义异常
+        //如果借款额度为空就手动抛出一个自定义的异常！
+        /*if(integralGrade.getBorrowAmount()==null){
+            //BORROW_AMOUNT_NULL_ERROR(-201, "借款额度不能为空"),
+            throw new BusinessException(ResponseEnum.BORROW_AMOUNT_NULL_ERROR);
+        }*/
+        Assert.notNull(integralGrade.getBorrowAmount(),ResponseEnum.BORROW_AMOUNT_NULL_ERROR);
         boolean result = integralGradeService.save(integralGrade);
         if (result) {
             return R.ok().message("保存成功");

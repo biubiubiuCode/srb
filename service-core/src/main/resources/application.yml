@@ -6,7 +6,7 @@ spring:
   #数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.15.128:3306/db_srb_core?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://192.168.15.128:3306/db_srb_core?useSSL=false&serverTimezone=UTC&&characterEncoding=utf8
     username: root
     password: 1234
   #环境配置
@@ -22,6 +22,13 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   #配置 xml 文件的路径，此处假设在 resource/xml/目录下
   #mapper-locations: classpath:xml/*.xml
+#  mapper-locations:  classpath:org/example/srb/core/mapper/xml/*.xml
   mapper-locations: org/example/srb/core/mapper/xml/*.xml
+
+##设置日志级别
+#logging:
+#  level:
+#    #ERROR级别以及以上级别的日志输出到控制台上，其他级别将不会输出
+#    root: error
 
 
