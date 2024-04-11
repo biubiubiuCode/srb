@@ -1,0 +1,6 @@
+2024-04-08 22:20:21 [INFO ] main StartupInfoLogger.java:55 org.example.srb.sms.UtilsTest Starting UtilsTest using Java 1.8.0_391 on Hex with PID 18456 (started by Administrator in E:\Project\ShangRongBao\srb\service-sms)
+2024-04-08 22:20:21 [INFO ] main SpringApplication.java:664 org.example.srb.sms.UtilsTest The following profiles are active: dev
+2024-04-08 22:20:27 [INFO ] main StartupInfoLogger.java:61 org.example.srb.sms.UtilsTest Started UtilsTest in 6.026 seconds (JVM running for 7.866)
+2024-04-08 22:22:31 [INFO ] main StartupInfoLogger.java:55 org.example.srb.sms.UtilsTest Starting UtilsTest using Java 1.8.0_391 on Hex with PID 17724 (started by Administrator in E:\Project\ShangRongBao\srb\service-sms)
+2024-04-08 22:22:31 [INFO ] main SpringApplication.java:664 org.example.srb.sms.UtilsTest The following profiles are active: dev
+2024-04-08 22:22:37 [INFO ] main StartupInfoLogger.java:61 org.example.srb.sms.UtilsTest Started UtilsTest in 6.474 seconds (JVM running for 8.538)

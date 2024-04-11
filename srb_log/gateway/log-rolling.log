@@ -1,0 +1,2 @@
+2024-04-11 18:28:55 [INFO ] main StartupInfoLogger.java:55 org.example.ServiceGatewayApplication Starting ServiceGatewayApplication using Java 1.8.0_391 on Hex with PID 9536 (E:\Project\ShangRongBao\srb\service-gateway\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-11 18:28:55 [INFO ] main SpringApplication.java:664 org.example.ServiceGatewayApplication The following profiles are active: dev

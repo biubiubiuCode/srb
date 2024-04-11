@@ -1,0 +1,12 @@
+2024-04-09 01:59:52 [INFO ] main StartupInfoLogger.java:55 org.example.srb.sms.ServiceSmsApplication Starting ServiceSmsApplication using Java 1.8.0_391 on Hex with PID 19340 (E:\Project\ShangRongBao\srb\service-sms\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-09 01:59:52 [INFO ] main SpringApplication.java:664 org.example.srb.sms.ServiceSmsApplication The following profiles are active: dev
+2024-04-09 01:59:55 [INFO ] main StartupInfoLogger.java:61 org.example.srb.sms.ServiceSmsApplication Started ServiceSmsApplication in 3.506 seconds (JVM running for 4.475)
+2024-04-09 02:08:52 [INFO ] main StartupInfoLogger.java:55 org.example.srb.sms.ServiceSmsApplication Starting ServiceSmsApplication using Java 1.8.0_391 on Hex with PID 15544 (E:\Project\ShangRongBao\srb\service-sms\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-09 02:08:52 [INFO ] main SpringApplication.java:664 org.example.srb.sms.ServiceSmsApplication The following profiles are active: dev
+2024-04-09 02:08:55 [INFO ] main StartupInfoLogger.java:61 org.example.srb.sms.ServiceSmsApplication Started ServiceSmsApplication in 3.154 seconds (JVM running for 4.137)
+2024-04-09 17:18:22 [INFO ] main StartupInfoLogger.java:55 org.example.srb.sms.ServiceSmsApplication Starting ServiceSmsApplication using Java 1.8.0_391 on Hex with PID 4088 (E:\Project\ShangRongBao\srb\service-sms\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-09 17:18:22 [INFO ] main SpringApplication.java:664 org.example.srb.sms.ServiceSmsApplication The following profiles are active: dev
+2024-04-09 17:18:29 [INFO ] main StartupInfoLogger.java:61 org.example.srb.sms.ServiceSmsApplication Started ServiceSmsApplication in 7.918 seconds (JVM running for 8.909)
+2024-04-09 18:16:37 [INFO ] main StartupInfoLogger.java:55 org.example.srb.sms.ServiceSmsApplication Starting ServiceSmsApplication using Java 1.8.0_391 on Hex with PID 8680 (E:\Project\ShangRongBao\srb\service-sms\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-09 18:16:37 [INFO ] main SpringApplication.java:664 org.example.srb.sms.ServiceSmsApplication The following profiles are active: dev
+2024-04-09 18:16:40 [INFO ] main StartupInfoLogger.java:61 org.example.srb.sms.ServiceSmsApplication Started ServiceSmsApplication in 3.603 seconds (JVM running for 4.757)

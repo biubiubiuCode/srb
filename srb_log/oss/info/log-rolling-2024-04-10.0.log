@@ -1,0 +1,15 @@
+2024-04-10 15:02:05 [INFO ] main StartupInfoLogger.java:55 org.example.srb.oss.ServiceOssApplication Starting ServiceOssApplication using Java 1.8.0_391 on Hex with PID 15956 (E:\Project\ShangRongBao\srb\service-oss\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 15:02:05 [INFO ] main SpringApplication.java:664 org.example.srb.oss.ServiceOssApplication The following profiles are active: dev
+2024-04-10 15:02:08 [INFO ] main StartupInfoLogger.java:61 org.example.srb.oss.ServiceOssApplication Started ServiceOssApplication in 3.424 seconds (JVM running for 4.046)
+2024-04-10 15:41:30 [INFO ] main StartupInfoLogger.java:55 org.example.srb.oss.ServiceOssApplication Starting ServiceOssApplication using Java 1.8.0_391 on Hex with PID 19740 (E:\Project\ShangRongBao\srb\service-oss\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 15:41:30 [INFO ] main SpringApplication.java:664 org.example.srb.oss.ServiceOssApplication The following profiles are active: dev
+2024-04-10 15:41:35 [INFO ] main StartupInfoLogger.java:61 org.example.srb.oss.ServiceOssApplication Started ServiceOssApplication in 6.228 seconds (JVM running for 7.563)
+2024-04-10 16:21:45 [INFO ] main StartupInfoLogger.java:55 org.example.srb.oss.ServiceOssApplication Starting ServiceOssApplication using Java 1.8.0_391 on Hex with PID 16828 (E:\Project\ShangRongBao\srb\service-oss\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 16:21:45 [INFO ] main SpringApplication.java:664 org.example.srb.oss.ServiceOssApplication The following profiles are active: dev
+2024-04-10 16:21:49 [INFO ] main StartupInfoLogger.java:61 org.example.srb.oss.ServiceOssApplication Started ServiceOssApplication in 5.974 seconds (JVM running for 7.15)
+2024-04-10 17:04:58 [INFO ] main StartupInfoLogger.java:55 org.example.srb.oss.ServiceOssApplication Starting ServiceOssApplication using Java 1.8.0_391 on Hex with PID 8624 (E:\Project\ShangRongBao\srb\service-oss\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 17:04:58 [INFO ] main SpringApplication.java:664 org.example.srb.oss.ServiceOssApplication The following profiles are active: dev
+2024-04-10 17:05:02 [INFO ] main StartupInfoLogger.java:61 org.example.srb.oss.ServiceOssApplication Started ServiceOssApplication in 5.584 seconds (JVM running for 6.562)
+2024-04-10 19:27:15 [INFO ] main StartupInfoLogger.java:55 org.example.srb.oss.ServiceOssApplication Starting ServiceOssApplication using Java 1.8.0_391 on Hex with PID 16520 (E:\Project\ShangRongBao\srb\service-oss\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 19:27:15 [INFO ] main SpringApplication.java:664 org.example.srb.oss.ServiceOssApplication The following profiles are active: dev
+2024-04-10 19:27:19 [INFO ] main StartupInfoLogger.java:61 org.example.srb.oss.ServiceOssApplication Started ServiceOssApplication in 5.741 seconds (JVM running for 6.718)

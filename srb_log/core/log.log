@@ -1,0 +1,9 @@
+2024-04-04 14:28:51 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 21404 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-04 14:28:51 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-04 14:28:55 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 4.49 seconds (JVM running for 5.396)
+2024-04-04 14:29:17 [INFO ] http-nio-8110-exec-1 AdminIntegralGradeController.java:41 org.example.srb.core.controller.admin.AdminIntegralGradeController info 级别的日志输出
+2024-04-04 14:29:17 [ERROR] http-nio-8110-exec-1 AdminIntegralGradeController.java:42 org.example.srb.core.controller.admin.AdminIntegralGradeController error级别的日志输出
+2024-04-04 14:29:17 [WARN ] http-nio-8110-exec-1 AdminIntegralGradeController.java:43 org.example.srb.core.controller.admin.AdminIntegralGradeController WARN级别的日志输出
+2024-04-04 15:35:14 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 15568 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-04 15:35:14 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-04 15:35:18 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 4.699 seconds (JVM running for 5.578)

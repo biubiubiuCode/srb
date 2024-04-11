@@ -1,0 +1,49 @@
+2024-04-08 14:25:37 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 18240 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-08 14:25:37 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-08 14:25:42 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 5.991 seconds (JVM running for 7.342)
+2024-04-08 14:26:21 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 2300 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-08 14:26:21 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-08 14:26:27 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 6.075 seconds (JVM running for 7.143)
+2024-04-08 14:56:58 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 3772 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-08 14:56:58 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-08 14:57:03 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 5.44 seconds (JVM running for 6.376)
+2024-04-08 14:57:15 [INFO ] http-nio-8110-exec-3 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-08 14:57:15 [INFO ] http-nio-8110-exec-3 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入数据库
+2024-04-08 14:57:32 [INFO ] http-nio-8110-exec-2 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-08 14:57:32 [INFO ] http-nio-8110-exec-2 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入数据库
+2024-04-08 14:57:33 [INFO ] http-nio-8110-exec-6 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-08 14:57:33 [INFO ] http-nio-8110-exec-6 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入数据库
+2024-04-08 14:57:35 [INFO ] http-nio-8110-exec-8 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-08 14:57:35 [INFO ] http-nio-8110-exec-8 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入数据库
+2024-04-08 14:57:36 [INFO ] http-nio-8110-exec-10 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-08 14:57:36 [INFO ] http-nio-8110-exec-10 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入数据库
+2024-04-08 14:57:38 [INFO ] http-nio-8110-exec-3 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-08 14:57:38 [INFO ] http-nio-8110-exec-3 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入数据库
+2024-04-08 14:57:39 [INFO ] http-nio-8110-exec-2 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-08 14:57:39 [INFO ] http-nio-8110-exec-2 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入数据库
+2024-04-08 14:57:40 [INFO ] http-nio-8110-exec-6 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-08 14:57:40 [INFO ] http-nio-8110-exec-6 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入数据库
+2024-04-08 14:57:42 [INFO ] http-nio-8110-exec-8 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-08 14:57:42 [INFO ] http-nio-8110-exec-8 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入数据库
+2024-04-08 14:57:42 [INFO ] http-nio-8110-exec-10 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-08 14:57:43 [INFO ] http-nio-8110-exec-10 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入数据库
+2024-04-08 14:57:47 [INFO ] http-nio-8110-exec-1 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-08 14:57:47 [INFO ] http-nio-8110-exec-1 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入数据库
+2024-04-08 21:33:24 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 19936 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-08 21:33:24 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-08 21:33:29 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 5.941 seconds (JVM running for 7.078)
+2024-04-08 21:44:17 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 18708 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-08 21:44:17 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-08 21:44:22 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 5.594 seconds (JVM running for 6.491)
+2024-04-08 21:46:16 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 9124 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-08 21:46:16 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-08 21:46:21 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 5.432 seconds (JVM running for 6.301)
+2024-04-08 22:53:53 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 4544 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-08 22:53:53 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-08 22:53:59 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 6.366 seconds (JVM running for 7.406)
+2024-04-08 22:56:34 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 17488 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-08 22:56:34 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-08 22:56:41 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 8.341 seconds (JVM running for 9.267)
+2024-04-08 22:58:46 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 16296 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-08 22:58:46 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-08 22:58:52 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 6.543 seconds (JVM running for 7.48)

@@ -1,0 +1,45 @@
+2024-04-10 00:23:32 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 4336 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 00:23:32 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 00:23:37 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 6.253 seconds (JVM running for 7.144)
+2024-04-10 01:04:53 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 22024 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 01:04:53 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 01:04:59 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 6.773 seconds (JVM running for 7.851)
+2024-04-10 01:08:41 [INFO ] http-nio-8110-exec-4 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-10 01:08:42 [INFO ] http-nio-8110-exec-4 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入redis
+2024-04-10 01:10:25 [INFO ] http-nio-8110-exec-8 DictServiceImpl.java:82 org.example.srb.core.service.impl.DictServiceImpl 从数据库中取值
+2024-04-10 01:10:25 [INFO ] http-nio-8110-exec-8 DictServiceImpl.java:93 org.example.srb.core.service.impl.DictServiceImpl 将数据存入redis
+2024-04-10 14:34:19 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 18976 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 14:34:19 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 14:34:34 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 18.339 seconds (JVM running for 25.88)
+2024-04-10 15:02:22 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 20228 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 15:02:22 [DEBUG] main StartupInfoLogger.java:56 org.example.srb.core.ServiceCoreApplication Running with Spring Boot v2.4.2, Spring v5.3.3
+2024-04-10 15:02:22 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 15:02:27 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 5.39 seconds (JVM running for 5.837)
+2024-04-10 15:40:01 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 9996 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 15:40:01 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 15:40:08 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 7.902 seconds (JVM running for 8.956)
+2024-04-10 16:22:06 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 7112 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 16:22:06 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 16:22:13 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 8.081 seconds (JVM running for 9.079)
+2024-04-10 16:50:04 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 17208 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 16:50:04 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 16:50:11 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 8.295 seconds (JVM running for 9.71)
+2024-04-10 17:04:55 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 5840 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 17:04:55 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 17:05:02 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 8.337 seconds (JVM running for 9.474)
+2024-04-10 18:45:37 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 4380 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 18:45:37 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 18:45:45 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 9.547 seconds (JVM running for 10.877)
+2024-04-10 18:47:30 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 17256 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 18:47:30 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 18:47:37 [INFO ] main StartupInfoLogger.java:61 org.example.srb.core.ServiceCoreApplication Started ServiceCoreApplication in 8.702 seconds (JVM running for 9.927)
+2024-04-10 19:12:28 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 17552 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 19:12:28 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 19:14:06 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 14464 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 19:14:06 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 19:30:46 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 10656 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 19:30:46 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 19:32:20 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 15528 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 19:32:20 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
+2024-04-10 19:40:55 [INFO ] main StartupInfoLogger.java:55 org.example.srb.core.ServiceCoreApplication Starting ServiceCoreApplication using Java 1.8.0_391 on Hex with PID 3908 (E:\Project\ShangRongBao\srb\service-core\target\classes started by Administrator in E:\Project\ShangRongBao\srb)
+2024-04-10 19:40:55 [INFO ] main SpringApplication.java:664 org.example.srb.core.ServiceCoreApplication The following profiles are active: dev
