@@ -1,0 +1,5 @@
+# jwt令牌设计
+jwt:
+  set:
+    signKey: org.example
+    expire: 4320000

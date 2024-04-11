@@ -6,8 +6,12 @@ spring:
     active: dev # 环境设置
   application:
     name: service-sms # 服务名
-
-  #spring:
+  #springCloud微服务
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # nacos服务地址
+  #spring redis:
   redis:
     host: 192.168.15.128
     port: 6379
@@ -21,6 +25,7 @@ spring:
         max-idle: 8     #最大空闲连接，默认8
         min-idle: 0     #最小空闲连接，默认0
 
+
 #阿里云短信
 aliyun:
   sms:
@@ -30,3 +35,19 @@ aliyun:
     template-code: 你的短信模板code
     sign-name: 你的短信模板签名
 
+#feign控制
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000 #连接超时配置
+        readTimeout: 600000 #执行超时配置
+  #开启Feign对Sentinel的支持
+  sentinel:
+    enabled: true
+
+#OpenFiegn日志级别
+logging:
+  level:
+    org.org.example.srb.sms.client.CoreUserInfoClient: DEBUG #以什么级别监控哪个接口
+    #org.org.example.srb.sms.client.CoreUserInfoClient文件的日志级别

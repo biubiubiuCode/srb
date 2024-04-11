@@ -9,7 +9,7 @@
 <!--定义全局变量。通过<property>定义的值会被插入到logger上下文中。定义变量后，可以使“${}”来使用变量-->
 
     <!-- 日志的输出目录 -->
-<!--    <property name="log.path" value="E:\Project\ShangRongBao\srb\srb_log\sms" />-->
+    <!--<property name="log.path" value="E:\Project\ShangRongBao\srb\srb_log\sms" />-->
     <property name="log.path" value="./srb_log/sms" />
 
     <!--控制台日志格式：彩色日志-->
@@ -84,7 +84,10 @@
 
 <!-- 开发环境和测试环境 -->
     <springProfile name="dev,test">
-        <logger name="org.example" level="INFO">
+        <logger name="org.example" level="DEBUG">
+<!--        <logger name="org.example" level="ERROR">-->
+<!--        <logger name="org.example" level="ALL">-->
+<!--        <logger name="org.example" level="INFO">-->
             <appender-ref ref="CONSOLE" />
             <appender-ref ref="ROLLING_FILE" />
         </logger>
