@@ -98,6 +98,15 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         //4.返回结果
         return dictList;
     }
+
+    @Override
+    public List<Dict> findByDictCode(String dictCode) {
+        QueryWrapper<Dict> dictQueryWrapper = new QueryWrapper<>();
+        dictQueryWrapper.eq("dict_code", dictCode);
+        Dict dict = baseMapper.selectOne(dictQueryWrapper);
+        return this.listByParentId(dict.getId());
+    }
+
     /**
      * 判断该节点是否有子节点
      */

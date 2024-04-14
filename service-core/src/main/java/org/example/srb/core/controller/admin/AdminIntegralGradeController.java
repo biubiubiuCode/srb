@@ -9,7 +9,6 @@ import org.example.common.result.R;
 import org.example.common.result.ResponseEnum;
 import org.example.srb.core.pojo.entity.IntegralGrade;
 import org.example.srb.core.service.IntegralGradeService;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +26,7 @@ import java.util.List;
  * @since 2024-04-01
  **/
 @Api(tags = "积分登记管理")
-@CrossOrigin //跨域
+//@CrossOrigin //跨域
 @RestController
 @Slf4j
 @RequestMapping("/admin/core/integralGrade")

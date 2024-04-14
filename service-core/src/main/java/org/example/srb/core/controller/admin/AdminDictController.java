@@ -11,7 +11,6 @@ import org.example.common.result.ResponseEnum;
 import org.example.srb.core.pojo.dto.ExcelDictDTO;
 import org.example.srb.core.pojo.entity.Dict;
 import org.example.srb.core.service.DictService;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,7 +31,7 @@ import java.util.List;
  * @since 2024-04-06
  **/
 @Api(tags = "数据字典管理")
-@CrossOrigin //跨域
+//@CrossOrigin //跨域
 @RestController
 @Slf4j
 @RequestMapping("/admin/core/dict")

@@ -2,16 +2,44 @@ server:
   port: 80 # 服务端口
 
 spring:
+  # 环境设置
   profiles:
-    active: dev # 环境设置
+    active: dev
+  # 服务名
   application:
-    name: service-gateway # 服务名
+    name: service-gateway
   #springCloud微服务
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848 # nacos服务地址
     gateway:
+      #服务发现
       discovery:
         locator:
           enabled: true # gateway可以发现nacos中的微服务，并自动生成转发路由
+###      #跨域
+#      globalcors:
+##        add-to-simple-url-handler-mapping: true
+#        corsConfigurations:
+#          '[/**]':
+#            allowedOrigins: "*"
+#            allowedMethods: GET, POST, PUT, DELETE, OPTIONS
+#            allowedHeaders: "*"
+#            allowCredentials: true
+###            maxAge: 1800
+
+      #自动路由
+      routes:
+        - id: service-core
+          uri: lb://service-core
+          predicates:
+            - Path=/*/core/**
+        - id: service-sms
+          uri: lb://service-sms
+          predicates:
+            - Path=/*/sms/**
+        - id: service-oss
+          uri: lb://service-oss
+          predicates:
+            - Path=/*/oss/**

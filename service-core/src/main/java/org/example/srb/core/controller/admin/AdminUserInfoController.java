@@ -10,7 +10,6 @@ import org.example.common.result.R;
 import org.example.srb.core.pojo.entity.UserInfo;
 import org.example.srb.core.pojo.query.UserInfoQuery;
 import org.example.srb.core.service.UserInfoService;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -25,7 +24,7 @@ import javax.annotation.Resource;
  **/
 @Api(tags = "会员管理")
 @Slf4j
-@CrossOrigin
+//@CrossOrigin
 @RestController
 @RequestMapping("/admin/core/userInfo")
 public class AdminUserInfoController {

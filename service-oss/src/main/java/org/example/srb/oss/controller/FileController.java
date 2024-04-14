@@ -7,7 +7,6 @@ import org.example.common.exception.BusinessException;
 import org.example.common.result.R;
 import org.example.common.result.ResponseEnum;
 import org.example.srb.oss.service.FileService;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +23,7 @@ import java.io.InputStream;
  * @since 2024-04-09
  **/
 @Api(tags = "阿里云文件管理")
-@CrossOrigin //跨域
+//@CrossOrigin //跨域
 @RestController
 @RequestMapping("/api/oss/file")
 public class FileController {

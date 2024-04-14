@@ -42,7 +42,7 @@ feign:
       default:
         connectTimeout: 10000 #连接超时配置
         readTimeout: 600000 #执行超时配置
-  #开启Feign对Sentinel的支持
+  #开启feign对Sentinel的支持
   sentinel:
     enabled: true
 

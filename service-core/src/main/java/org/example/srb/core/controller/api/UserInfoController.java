@@ -14,7 +14,6 @@ import org.example.srb.core.pojo.vo.RegisterVO;
 import org.example.srb.core.pojo.vo.UserInfoVO;
 import org.example.srb.core.service.UserInfoService;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,7 +34,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Api(tags = "会员接口")
 @Slf4j
-@CrossOrigin
+//@CrossOrigin
 @RestController
 @RequestMapping("/api/core/userInfo")
 public class UserInfoController {
@@ -104,7 +103,7 @@ public class UserInfoController {
 
     @ApiOperation("校验手机号是否注册")
     @GetMapping("/checkMobile/{mobile}")
-    public boolean checkMobile(@PathVariable String mobile){
+    public boolean checkMobile(@PathVariable("mobile") String mobile){
         return userInfoService.checkMobile(mobile);
     }
 }

@@ -12,7 +12,6 @@ import org.example.common.util.RegexValidateUtils;
 import org.example.srb.sms.client.CoreUserInfoClient;
 import org.example.srb.sms.service.SmsService;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 
 
 @Api(tags = "短信管理")
-@CrossOrigin //跨域
+//@CrossOrigin //跨域
 @RestController
 @Slf4j
 @RequestMapping("/api/sms")

@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.common.result.R;
 import org.example.srb.core.pojo.entity.UserLoginRecord;
 import org.example.srb.core.service.UserLoginRecordService;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +21,7 @@ import java.util.List;
  **/
 @Api(tags = "会员登录日志接口")
 @Slf4j
-@CrossOrigin
+//@CrossOrigin
 @RestController
 @RequestMapping("/admin/core/userLoginRecord")
 public class AdminUserLoginRecordController {
