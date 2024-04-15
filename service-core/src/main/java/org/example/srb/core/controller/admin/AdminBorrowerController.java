@@ -7,9 +7,13 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.example.common.result.R;
 import org.example.srb.core.pojo.entity.Borrower;
+import org.example.srb.core.pojo.vo.BorrowerApprovalVO;
+import org.example.srb.core.pojo.vo.BorrowerDetailVO;
 import org.example.srb.core.service.BorrowerService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,5 +51,20 @@ public class AdminBorrowerController {
         return R.ok().data("pageModel",pageModel);
     }
 
+    @ApiOperation("获取借款人信息")
+    @GetMapping("/show/{id}")
+    public R show(
+            @ApiParam(value = "借款人id", required = true)
+            @PathVariable Long id) {
+        BorrowerDetailVO borrowerDetailVO = borrowerService.getBorrowerDetailVOById(id);
+        return R.ok().data("borrowerDetailVO", borrowerDetailVO);
+    }
+
+    @ApiOperation("借款额度审批")
+    @PostMapping("/approval")
+    public R approval(@RequestBody BorrowerApprovalVO borrowerApprovalVO) {
+        borrowerService.approval(borrowerApprovalVO);
+        return R.ok().message("审批完成");
+    }
 
 }

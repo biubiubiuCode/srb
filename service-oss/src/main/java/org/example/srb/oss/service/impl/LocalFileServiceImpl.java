@@ -32,7 +32,10 @@ public class LocalFileServiceImpl implements FileService {
             //文件名：uuid.扩展名
             fileName = UUID.randomUUID().toString() + fileName.substring(fileName.lastIndexOf("."));
             //本地存储文件:根路径+文件名
-            String path ="./srb_photo/"+ module + "/" + folder + "/";
+//            String path ="./srb_photo/"+ module + "/" + folder + "/";
+//            String path ="E:\Project\ShangRongBao\srb-front\srb-admin\src\photo"+ module + "\\" + folder + "\\";
+            String path ="E:\\Project\\ShangRongBao\\srb-front\\srb-admin\\src\\photo\\"+ module + "/" + folder + "/";
+
 
             String newFileName =path+ fileName;
 
@@ -55,7 +58,7 @@ public class LocalFileServiceImpl implements FileService {
             }
             log.info("将文件 "+fileName+"保存到了 "+newFileName);
             //文件
-            return newFileName;
+            return module + "/" + folder + "/"+fileName;
         } catch (IOException e) {
             throw new BusinessException(ResponseEnum.UPLOAD_ERROR, e);
         } finally {

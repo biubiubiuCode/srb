@@ -23,4 +23,6 @@ public interface DictService extends IService<Dict> {
     public List<Dict> listByParentId(Long parentId);
 
     public List<Dict> findByDictCode(String dictCode);
+
+    String getNameByParentDictCodeAndValue(String dictcode, Integer value);
 }
