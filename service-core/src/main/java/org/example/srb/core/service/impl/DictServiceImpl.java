@@ -69,7 +69,7 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         List<Dict> dictList=null;
         try {
             //1.先从redis查询
-            redisTemplate.opsForValue().get("srb:core:dictList:"+parentId);
+            dictList = (List<Dict>)redisTemplate.opsForValue().get("srb:core:dictList:"+parentId);
             if (dictList!=null){
                 log.info("从redis中取值");
                 return dictList;
@@ -91,45 +91,59 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         try {
             //3.将数据存入redis
             log.info("将数据存入redis");
-            redisTemplate.opsForValue().set("srb:core:dictList:"+ parentId, dictList,5, TimeUnit.MINUTES);
+            redisTemplate.opsForValue().set("srb:core:dictList:"+ parentId, dictList,20, TimeUnit.MINUTES);
         } catch (Exception e) {
             log.info("redis服务器异常"+ExceptionUtils.getStackTrace(e));//此处不抛出异常，继续执行后面的代码
         }
         //4.返回结果
         return dictList;
     }
-
+//    @Override
+//    public List<Dict> findByDictCode(String dictCode) {
+//    QueryWrapper<Dict> dictQueryWrapper = new QueryWrapper<>();
+//        dictQueryWrapper.eq("dict_code", dictCode);
+//    Dict dict = baseMapper.selectOne(dictQueryWrapper);
+//        return this.listByParentId(dict.getId());
+//    }
     @Override
     public List<Dict> findByDictCode(String dictCode) {
-        QueryWrapper<Dict> dictQueryWrapper = new QueryWrapper<>();
-        dictQueryWrapper.eq("dict_code", dictCode);
-        Dict dict = baseMapper.selectOne(dictQueryWrapper);
-        return this.listByParentId(dict.getId());
-    }
-
-    @Override
-    public String getNameByParentDictCodeAndValue(String dictCode, Integer value) {
-        QueryWrapper<Dict> dictQueryWrapper = new QueryWrapper<Dict>();
-        dictQueryWrapper.eq("dict_code", dictCode);
-        Dict parentDict = baseMapper.selectOne(dictQueryWrapper);
-
-        if(parentDict == null) {
-            return "";
+        //改进，使用redis
+        List<Dict> dictList=null;
+        try {
+            //1.先从redis查询
+            dictList = (List<Dict>)redisTemplate.opsForValue().get("srb:core:codeName:"+dictCode);
+            if (dictList!=null){
+                log.info("从redis中取值");
+                return dictList;
+            }
+        } catch (Exception e) {
+            log.error("redis服务器异常"+  ExceptionUtils.getStackTrace(e));//此处不抛出异常，继续执行后面的代码
         }
 
-        dictQueryWrapper = new QueryWrapper<>();
-        dictQueryWrapper
-                .eq("parent_id", parentDict.getId())
-                .eq("value", value);
-        Dict dict = baseMapper.selectOne(dictQueryWrapper);
+        //2.没有再从数据库查询
+        log.info("从数据库中取值");
+        //先找dict_code对应的id
+        Long id = baseMapper.selectOne(new QueryWrapper<Dict>()
+                        .eq("dict_code", dictCode)).getId();
 
-        if(dict == null) {
-            return "";
+        dictList = baseMapper.selectList(new QueryWrapper<Dict>()
+                .eq("parent_id",id)
+        );
+        dictList.forEach(dict -> {
+            //如果有子节点，则是非叶子节点
+            boolean hasChildren = this.hasChildren(dict.getId());
+            dict.setHasChildren(hasChildren);
+        });
+        try {
+            //3.将数据存入redis
+            log.info("将数据存入redis");
+            redisTemplate.opsForValue().set("srb:core:codeName:"+ dictCode, dictList,20, TimeUnit.MINUTES);
+        } catch (Exception e) {
+            log.info("redis服务器异常"+ExceptionUtils.getStackTrace(e));//此处不抛出异常，继续执行后面的代码
         }
 
-        return dict.getName();
+        return dictList;
     }
-
     /**
      * 判断该节点是否有子节点
      */
@@ -140,6 +154,46 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
             return true;
         }
         return false;
+    }
+
+//    @Override
+//    public String getNameByParentDictCodeAndValue(String dictCode, Integer value) {
+//        QueryWrapper<Dict> dictQueryWrapper = new QueryWrapper<Dict>();
+//        dictQueryWrapper.eq("dict_code", dictCode);
+//        Dict parentDict = baseMapper.selectOne(dictQueryWrapper);
+//
+//        if(parentDict == null) {
+//            return "";
+//        }
+//
+//        dictQueryWrapper = new QueryWrapper<>();
+//        dictQueryWrapper
+//                .eq("parent_id", parentDict.getId())
+//                .eq("value", value);
+//        Dict dict = baseMapper.selectOne(dictQueryWrapper);
+//
+//        if(dict == null) {
+//            return "";
+//        }
+//
+//        return dict.getName();
+//    }
+    @Override
+    public String getNameByParentDictCodeAndValue(String dictCode, Integer value) {
+        //改进，使用redis
+        List<Dict> dictList=findByDictCode(dictCode);
+
+        if(dictList == null||dictList.isEmpty()) {
+            return "";
+        }
+        String dictName="";
+        for (Dict dict : dictList) {
+            if (dict.getValue()==value){
+                dictName= dict.getName();
+                break;
+            }
+        }
+        return dictName;
     }
 
 }

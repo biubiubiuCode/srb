@@ -130,7 +130,15 @@ public class BorrowerServiceImpl extends ServiceImpl<BorrowerMapper, Borrower> i
                 .orderByDesc("id");
         return baseMapper.selectPage(pageParam,borrowerQueryWrapper);
     }
-    /*根据ID获取借款人的详细信息*/
+    /**
+     * 根据ID获取借款人的详细信息（关联数字字典，把值转换成了描述为文字）
+     * 因为borrower表与borrower_attach表的关联外键是borrower表的id，所有传入参数是borrower表中的id
+     * @param id borrower表中的id
+     * @return
+     *
+     * @author Administrator
+     * @date 2024/4/16 0016 17:44
+    */
     @Override
     public BorrowerDetailVO getBorrowerDetailVOById(Long id) {
         //获取借款人信息

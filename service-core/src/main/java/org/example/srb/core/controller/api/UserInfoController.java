@@ -81,7 +81,7 @@ public class UserInfoController {
         Assert.notEmpty(password, ResponseEnum.PASSWORD_NULL_ERROR);
 
         String ip = request.getRemoteAddr();
-        UserInfoVO userInfoVO = userInfoService.login(loginVO, ip);
+        UserInfoVO userInfoVO = userInfoService.login(loginVO, ip);//service里生成token
 
         return R.ok().data("userInfo", userInfoVO);
     }
