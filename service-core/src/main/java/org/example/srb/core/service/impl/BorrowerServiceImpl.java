@@ -177,6 +177,42 @@ public class BorrowerServiceImpl extends ServiceImpl<BorrowerMapper, Borrower> i
 
         return borrowerDetailVO;
     }
+    //重写，直接传Borrower对象，防止查两遍
+    public BorrowerDetailVO getBorrowerDetailVOById(Borrower borrower) {
+
+        //填充基本借款人信息
+        BorrowerDetailVO borrowerDetailVO = new BorrowerDetailVO();
+        BeanUtils.copyProperties(borrower, borrowerDetailVO);
+
+        //婚否
+        borrowerDetailVO.setMarry(borrower.getMarry()?"是":"否");
+        //性别
+        borrowerDetailVO.setSex(borrower.getSex()==1?"男":"女");
+
+        //计算下拉列表选中内容
+        String education = dictService.getNameByParentDictCodeAndValue("education", borrower.getEducation());
+        String industry = dictService.getNameByParentDictCodeAndValue("moneyUse", borrower.getIndustry());
+        String income = dictService.getNameByParentDictCodeAndValue("income", borrower.getIncome());
+        String returnSource = dictService.getNameByParentDictCodeAndValue("returnSource", borrower.getReturnSource());
+        String contactsRelation = dictService.getNameByParentDictCodeAndValue("relation", borrower.getContactsRelation());
+
+        //设置下拉列表选中内容
+        borrowerDetailVO.setEducation(education);
+        borrowerDetailVO.setIndustry(industry);
+        borrowerDetailVO.setIncome(income);
+        borrowerDetailVO.setReturnSource(returnSource);
+        borrowerDetailVO.setContactsRelation(contactsRelation);
+
+        //审批状态
+        String status = BorrowerStatusEnum.getMsgByStatus(borrower.getStatus());
+        borrowerDetailVO.setStatus(status);
+
+        //获取附件VO列表
+        List<BorrowerAttachVO> borrowerAttachVOList =  borrowerAttachService.selectBorrowerAttachVOList(borrower.getId());
+        borrowerDetailVO.setBorrowerAttachVOList(borrowerAttachVOList);
+
+        return borrowerDetailVO;
+    }
     /*审批*/
     @Override
     public void approval(BorrowerApprovalVO borrowerApprovalVO) {

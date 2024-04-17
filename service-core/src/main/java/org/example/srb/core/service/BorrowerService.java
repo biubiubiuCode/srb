@@ -25,6 +25,7 @@ public interface BorrowerService extends IService<Borrower> {
     IPage<Borrower> listPage(Page<Borrower> pageParam, String keyWord);
 
     BorrowerDetailVO getBorrowerDetailVOById(Long id);
+    BorrowerDetailVO getBorrowerDetailVOById(Borrower borrower);
 
     void approval(BorrowerApprovalVO borrowerApprovalVO);
 }

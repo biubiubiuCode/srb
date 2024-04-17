@@ -20,6 +20,7 @@ import org.example.srb.core.pojo.vo.BorrowerDetailVO;
 import org.example.srb.core.service.BorrowInfoService;
 import org.example.srb.core.service.BorrowerService;
 import org.example.srb.core.service.DictService;
+import org.example.srb.core.service.LendService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -49,6 +50,8 @@ public class BorrowInfoServiceImpl extends ServiceImpl<BorrowInfoMapper, BorrowI
 
     @Resource
     private BorrowerService borrowerService;
+    @Resource
+    private LendService lendService;
 
     @Override
     public BigDecimal getBorrowAmount(Long userId) {
@@ -154,15 +157,20 @@ public class BorrowInfoServiceImpl extends ServiceImpl<BorrowInfoMapper, BorrowI
         * 因为borrower表与borrower_attach表的关联外键是borrower表的id，
         * 所有这里实际查了俩次！
         * 可以优化？需要重新设计表格！
+        * 一、
         * 优化borrower表？user_id作为主键的话不利于分页分表，代价有点点大
+        * 二、
         * 优化borrow_info表，把user_id改为borrower_id，可行，但要改其他接口。
+        * 三、
+        * 折中方案，直接重写getBorrowerDetailVOById()，传Borrower
         *
         */
         borrowerQueryWrapper.eq("user_id", borrowInfo.getUserId());
         Borrower borrower = borrowerMapper.selectOne(borrowerQueryWrapper);
 
         //2.组装借款人对象BorrowerDetailVO，返回借款人信息
-        BorrowerDetailVO borrowerDetailVO = borrowerService.getBorrowerDetailVOById(borrower.getId());
+//        BorrowerDetailVO borrowerDetailVO = borrowerService.getBorrowerDetailVOById(borrower.getId());
+        BorrowerDetailVO borrowerDetailVO = borrowerService.getBorrowerDetailVOById(borrower);
 
         //3.Map组装数据
         Map<String, Object> result = new HashMap<>();
@@ -184,7 +192,7 @@ public class BorrowInfoServiceImpl extends ServiceImpl<BorrowInfoMapper, BorrowI
         //审核通过则创建标的
         if (borrowInfoApprovalVO.getStatus().intValue() == BorrowInfoStatusEnum.CHECK_OK.getStatus().intValue()) {
             //创建标的
-            //TODO
+            lendService.createLend(borrowInfoApprovalVO, borrowInfo);
         }
     }
 }

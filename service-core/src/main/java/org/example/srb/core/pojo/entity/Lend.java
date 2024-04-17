@@ -1,17 +1,20 @@
 package org.example.srb.core.pojo.entity;
 
-import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
-import java.time.LocalDate;
-import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p>
@@ -41,7 +44,7 @@ public class Lend implements Serializable {
     @ApiModelProperty(value = "标的编号")
     private String lendNo;
 
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "标题(标的描述)")
     private String title;
 
     @ApiModelProperty(value = "标的金额")
@@ -111,6 +114,11 @@ public class Lend implements Serializable {
     @TableField("is_deleted")
     @TableLogic
     private Boolean deleted;
+
+    //扩展字段
+    @ApiModelProperty(value = "其他参数：存借款用途、还款方式、审批状态等")
+    @TableField(exist = false)
+    private Map<String,Object> param = new HashMap<>();
 
 
 }
