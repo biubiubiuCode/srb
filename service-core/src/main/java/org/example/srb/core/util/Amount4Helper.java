@@ -10,6 +10,9 @@ import java.util.Map;
 public class Amount4Helper {
 
     /**
+     * 一次还本付息
+     * 一次还本付息是贷款到期后一次性归还本金和利息
+     *
      * 还款金额 = 本金 + 本金*月利率*期限
      * @param amount
      * @param yearRate

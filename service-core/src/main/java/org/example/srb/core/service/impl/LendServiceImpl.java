@@ -3,6 +3,7 @@ package org.example.srb.core.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.example.srb.core.enums.LendStatusEnum;
+import org.example.srb.core.enums.ReturnMethodEnum;
 import org.example.srb.core.mapper.BorrowerMapper;
 import org.example.srb.core.mapper.LendMapper;
 import org.example.srb.core.pojo.entity.BorrowInfo;
@@ -13,6 +14,10 @@ import org.example.srb.core.pojo.vo.BorrowerDetailVO;
 import org.example.srb.core.service.BorrowerService;
 import org.example.srb.core.service.DictService;
 import org.example.srb.core.service.LendService;
+import org.example.srb.core.util.Amount1Helper;
+import org.example.srb.core.util.Amount2Helper;
+import org.example.srb.core.util.Amount3Helper;
+import org.example.srb.core.util.Amount4Helper;
 import org.example.srb.core.util.LendNoUtils;
 import org.springframework.stereotype.Service;
 
@@ -132,5 +137,25 @@ public class LendServiceImpl extends ServiceImpl<LendMapper, Lend> implements Le
         result.put("borrower", borrowerDetailVO);
 
         return result;
+    }
+
+    @Override
+    public BigDecimal getInterestCount(BigDecimal invest, BigDecimal yearRate, Integer totalmonth, Integer returnMethod) {
+        BigDecimal interestCount;
+        //计算总利息
+        if (returnMethod.intValue() == ReturnMethodEnum.ONE.getMethod()) {
+            //等额本息
+            interestCount = Amount1Helper.getInterestCount(invest, yearRate, totalmonth);
+        } else if (returnMethod.intValue() == ReturnMethodEnum.TWO.getMethod()) {
+            //等额本金
+            interestCount = Amount2Helper.getInterestCount(invest, yearRate, totalmonth);
+        } else if(returnMethod.intValue() == ReturnMethodEnum.THREE.getMethod()) {
+            //按期付息到期还本
+            interestCount = Amount3Helper.getInterestCount(invest, yearRate, totalmonth);
+        } else {
+            //一次性还本付息
+            interestCount = Amount4Helper.getInterestCount(invest, yearRate, totalmonth);
+        }
+        return interestCount;
     }
 }

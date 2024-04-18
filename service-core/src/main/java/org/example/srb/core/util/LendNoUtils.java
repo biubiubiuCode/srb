@@ -45,7 +45,7 @@ public class LendNoUtils {
         return "LEND" + getNo();
     }
     /**
-     * 投资人投资编号
+     * 投资人投资条目编号
      * @param
      * @return java.lang.String
      * @author Administrator

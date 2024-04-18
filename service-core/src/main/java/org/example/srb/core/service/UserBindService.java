@@ -23,4 +23,13 @@ public interface UserBindService extends IService<UserBind> {
     *  处理第三方发回来的回调
     */
     void notify(Map<String, Object> paramMap);
+    
+    /**
+     * 根据userId获取用户绑定账号(即绑定协议号)
+     * @param investUserId
+     * @return java.lang.String
+     * @author Administrator
+     * @date 2024/4/18 0018 19:43       
+    */
+    String getBindCodeByUserId(Long investUserId);
 }

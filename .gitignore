@@ -33,5 +33,6 @@ build/
 .vscode/
 
 ### log ###
-/srb-log/
 *.log
+/srb-log/*.log
+#**/*.log

@@ -5,6 +5,7 @@ import org.example.srb.core.pojo.entity.BorrowInfo;
 import org.example.srb.core.pojo.entity.Lend;
 import org.example.srb.core.pojo.vo.BorrowInfoApprovalVO;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -42,4 +43,15 @@ public interface LendService extends IService<Lend> {
      * @date 2024/4/17 0017 20:34       
     */
     Map<String,Object> getLendDetail(Long id);
+    /**
+     * 根据投资金额计算收益（根据四种还款方式计算）
+     * @param invest
+     * @param yearRate
+     * @param totalmonth
+     * @param returnMethod
+     * @return java.math.BigDecimal
+     * @author Administrator
+     * @date 2024/4/18 0018 19:25       
+    */
+    BigDecimal getInterestCount(BigDecimal invest, BigDecimal yearRate, Integer totalmonth, Integer returnMethod);
 }
