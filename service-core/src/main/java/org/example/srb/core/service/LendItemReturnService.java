@@ -4,6 +4,7 @@ import org.example.srb.core.pojo.entity.LendItemReturn;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -24,4 +25,20 @@ public interface LendItemReturnService extends IService<LendItemReturn> {
      * @date 2024/4/19 0019 23:10
     */
     List<LendItemReturn> selectByLendId(Long lendId, Long userId);
+    /**
+     * 根据还款id获取回款列表
+     * @param lendReturnId
+     * @return java.util.List<java.util.Map<java.lang.String,java.lang.Object>>
+     * @author Administrator
+     * @date 2024/4/20 0020 0:29
+    */
+    List<Map<String, Object>> addReturnDetail(Long lendReturnId);
+    /**
+     * 根据还款计划id获取对应的回款计划列表
+     * @param lendReturnId
+     * @return java.util.List<org.example.srb.core.pojo.entity.LendItemReturn>
+     * @author Administrator
+     * @date 2024/4/20 0020 0:30
+    */
+    List<LendItemReturn> selectLendItemReturnList(Long lendReturnId);
 }
