@@ -54,4 +54,21 @@ public interface LendService extends IService<Lend> {
      * @date 2024/4/18 0018 19:25       
     */
     BigDecimal getInterestCount(BigDecimal invest, BigDecimal yearRate, Integer totalmonth, Integer returnMethod);
+
+    /**
+     * 标的满标放款
+     * @param lendId
+     * @return void
+     * @author Administrator
+     * @date 2024/4/19 0019 0:03
+    */
+    void makeLoan(Long lendId);
+    /**
+     * 撤标
+     * @param lendId
+     * @return void
+     * @author Administrator
+     * @date 2024/4/19 0019 1:53
+    */
+    void cancelLend(Long lendId);
 }

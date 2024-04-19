@@ -31,6 +31,7 @@ import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -200,6 +201,7 @@ public class LendItemServiceImpl extends ServiceImpl<LendItemMapper, LendItem> i
         transFlowService.saveTransFlow(transFlowBO);
         return "success";
     }
+
     /**
      * 获取投资记录的投资对象
      * @param lendItemNo 投资对象id
@@ -211,5 +213,14 @@ public class LendItemServiceImpl extends ServiceImpl<LendItemMapper, LendItem> i
         QueryWrapper<LendItem> queryWrapper = new QueryWrapper();
         queryWrapper.eq("lend_item_no", lendItemNo);
         return baseMapper.selectOne(queryWrapper);
+    }
+
+    @Override
+    public List<LendItem> selectByLendId(Long lendId, Integer status) {
+        QueryWrapper<LendItem> queryWrapper = new QueryWrapper();
+        queryWrapper.eq("lend_id", lendId);
+        queryWrapper.eq("status", status);
+        List<LendItem> lendItemList = baseMapper.selectList(queryWrapper);
+        return lendItemList;
     }
 }

@@ -46,6 +46,11 @@ public class HfbConst {
      * 放款
      */
     public static final String MAKE_LOAD_URL = "http://localhost:9999/userInvest/AgreeAccountLendProject";
+    /**
+     * 撤标
+     */
+    public static final String CANCEL_LEND_URL = "http://localhost:9999/userInvest/CancelProject";
+//    public static final String CANCEL_LEND_NOTIFY_URL = "http://localhost:9999/userInvest/AgreeAccountLendProject";
 
     /**
      * 提现

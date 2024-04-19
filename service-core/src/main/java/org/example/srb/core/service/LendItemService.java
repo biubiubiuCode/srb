@@ -4,11 +4,14 @@ import org.example.srb.core.pojo.entity.LendItem;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.example.srb.core.pojo.vo.InvestVO;
 
+import java.util.List;
 import java.util.Map;
 
 /**
  * <p>
  * 标的出借记录表 服务类
+ * 多对多关系表
+ * 把借款人与投资人关联在一起
  * </p>
  *
  * @author wendao
@@ -33,4 +36,13 @@ public interface LendItemService extends IService<LendItem> {
      * @date 2024/4/18 0018 19:49
      */
     String notify(Map<String, Object> paramMap);
+    /**
+     *
+     * @param lendId 标的id（标的表中的主键值，非标的编号）
+     * @param status 状态
+     * @return java.util.List<org.example.srb.core.pojo.entity.LendItem>
+     * @author Administrator
+     * @date 2024/4/19 0019 0:41       
+    */
+    List<LendItem> selectByLendId(Long lendId,Integer status);
 }

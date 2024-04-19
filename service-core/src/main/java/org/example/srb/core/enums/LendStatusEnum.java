@@ -17,8 +17,8 @@ public enum LendStatusEnum {
     PAY_OK(3, "已结清"),
     FINISH(4, "结标"),
     CANCEL(-1, "已撤标"),
-//    OVERDUE(-1, "逾期催收中"),
-//    BAD_BILL(-2, "坏账"),
+    OVERDUE(-1, "逾期催收中"),
+    BAD_BILL(-2, "坏账"),
     ;
 
     private Integer status;
