@@ -223,4 +223,12 @@ public class LendItemServiceImpl extends ServiceImpl<LendItemMapper, LendItem> i
         List<LendItem> lendItemList = baseMapper.selectList(queryWrapper);
         return lendItemList;
     }
+
+    @Override
+    public List<LendItem> selectByLendId(Long lendId) {
+        QueryWrapper<LendItem> queryWrapper = new QueryWrapper();
+        queryWrapper.eq("lend_id", lendId);
+        List<LendItem> lendItemList = baseMapper.selectList(queryWrapper);
+        return lendItemList;
+    }
 }

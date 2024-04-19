@@ -45,4 +45,12 @@ public interface LendItemService extends IService<LendItem> {
      * @date 2024/4/19 0019 0:41       
     */
     List<LendItem> selectByLendId(Long lendId,Integer status);
+    /**
+     * 根据标的的id（lend表主键）获取标的的投资列表
+     * @param lendId
+     * @return java.util.List<org.example.srb.core.pojo.entity.LendItem>
+     * @author Administrator
+     * @date 2024/4/19 0019 22:11
+    */
+    List<LendItem> selectByLendId(Long lendId);
 }
