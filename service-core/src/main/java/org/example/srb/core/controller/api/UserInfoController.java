@@ -11,6 +11,7 @@ import org.example.common.util.RegexValidateUtils;
 import org.example.srb.base.util.JwtUtils;
 import org.example.srb.core.pojo.vo.LoginVO;
 import org.example.srb.core.pojo.vo.RegisterVO;
+import org.example.srb.core.pojo.vo.UserIndexVO;
 import org.example.srb.core.pojo.vo.UserInfoVO;
 import org.example.srb.core.service.UserInfoService;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -105,6 +106,15 @@ public class UserInfoController {
     @GetMapping("/checkMobile/{mobile}")
     public boolean checkMobile(@PathVariable("mobile") String mobile){
         return userInfoService.checkMobile(mobile);
+    }
+
+    @ApiOperation("获取个人空间（首页）用户信息")
+    @GetMapping("/auth/getIndexUserInfo")
+    public R getIndexUserInfo(HttpServletRequest request) {
+        String token = request.getHeader("token");
+        Long userId = JwtUtils.getUserId(token);
+        UserIndexVO userIndexVO = userInfoService.getIndexUserInfo(userId);
+        return R.ok().data("userIndexVO", userIndexVO);
     }
 }
 

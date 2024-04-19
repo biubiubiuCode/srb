@@ -7,6 +7,7 @@ import org.example.srb.core.pojo.entity.UserInfo;
 import org.example.srb.core.pojo.query.UserInfoQuery;
 import org.example.srb.core.pojo.vo.LoginVO;
 import org.example.srb.core.pojo.vo.RegisterVO;
+import org.example.srb.core.pojo.vo.UserIndexVO;
 import org.example.srb.core.pojo.vo.UserInfoVO;
 
 /**
@@ -27,4 +28,12 @@ public interface UserInfoService extends IService<UserInfo> {
     void lock(Long id, Integer status);
 
     boolean checkMobile(String mobile);
+    /**
+     * 获取个人空间（首页）用户信息
+     * @param userId
+     * @return org.example.srb.core.pojo.vo.UserIndexVO
+     * @author Administrator
+     * @date 2024/4/19 0019 23:39
+    */
+    UserIndexVO getIndexUserInfo(Long userId);
 }
